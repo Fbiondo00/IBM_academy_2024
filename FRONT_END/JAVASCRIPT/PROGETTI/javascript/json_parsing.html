@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+
+<body>
+
+
+  <div id="p1"></div>
+  <div id="p2"></div>
+  <div id="p3"></div>
+
+
+    <script>
+
+
+   // SIMPLE JSON MOCK
+   /*
+   SIMPLE JSON : ogni proprietà
+   del JSON ha solo un valore
+   */
+   var person1 = {
+
+    "firstName":"Vera",
+    "lastName":"Cesari",
+    "age":22
+
+   }
+
+   /*
+   COMPLEX JSON = UN JSON
+   IN CUI ALMENO UAN PROPRIETA'
+   HA PIU' DI UN VALORE
+   */
+   var person2 = {
+
+    "firstName": "Salvo",
+    "lastName":"Sestito",
+    "age":22,
+    "auto" : {
+
+      "auto1":"autoX",
+      "auto2":"autoY"
+    }
+
+   }
+
+   // MOCK JSON COMPLESSO
+   var person3 = {
+
+    "firstName": "Giuseppe",
+    "lastName":"Levato",
+    "age":24,
+    "auto" : ["autoZ","autoW"]
+
+
+   }
+
+   /*
+   Il JavaScript Engine, se riceve in ingresso un JSON, effettua UN CAST IMPLICITO
+   da JSON a Javascript Object
+   Di fatto il parsing di un JSON non richiede l'utilizzo di
+   una funzione specifica ma viene implicitamente automatizzato
+   dal RUNTIME ENVIRONMENT!!!!!!
+
+   L'OPERAZIONE INVERSA NON E' AUTOMIZZATA DAL JAVASCROT ENGINE!!!!!
+   La Conversione da un Oggetto Javascript ad un JSON non è implicita!!!!
+   In questo caso occorre utilizzare una funzione Javascript di nome stringfy
+   stringfy(Javascript Object)  il Javascript Engine converte il javascript Object
+   in JSON */
+   
+   document.getElementById("p1").innerHTML = person1.firstName + " " + person1.lastName + 
+   " " +  person1.age;
+
+   document.getElementById("p2").innerHTML = person2.firstName + " " + person2.lastName + 
+   " " +  person2.age + " " + person2.auto.auto1 + " " + person2.auto.auto2
+
+   document.getElementById("p3").innerHTML = person3.firstName + " " + person3.lastName + 
+   " " +  person3.age + " " + person3.auto[0] + " " + person3.auto[1]
+
+
+    </script>
+
+
+
+
+</body>
+
+
+
+</html>

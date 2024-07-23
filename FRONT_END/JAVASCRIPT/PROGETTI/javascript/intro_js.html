@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<body>
+
+    <script>
+
+        //document.write("hello");
+        //alert("hello");
+
+        /*
+        Una funzione tradizionale, a differenza di un metodo,
+        deve avere nella sua firma:
+        1. parola chiave function
+        2. nome
+        3.lista dei parametri (vuota o piena)
+        */
+        function sayHello() {
+
+            alert("hello");
+
+        }
+
+        /*
+        A partire dalle specifiche ECMASCRIPT 6 (2015)
+        è possibile dichiarare una anonymous arrow
+        function, ovvero una funzione che non richiede
+        l'utilizzo della parola chiave function, nè richiede
+        un nome, e può specificare il contenuto del corpo
+        tramite {} seguite dalla sintassi arrow (=>)
+
+        Le funzioni anonime sono più coincise rispetto
+        alle funzioni tradizionali e inoltre possono
+        essere passate come argomenti in input a metodi
+        o funzioni (cosa che non è possibile per le
+        funzioni tradizionali)
+        */
+        var sayHelloNew = () => {
+
+            alert("helloNew");
+        }
+
+
+
+    </script>
+
+    <input type="button" value="sayHello" onclick="sayHello()"/><br><br>
+    <input type="button" value="sayHelloNew" onclick="sayHelloNew()"/>
+
+
+
+
+</body>
+
+
+
+</html>

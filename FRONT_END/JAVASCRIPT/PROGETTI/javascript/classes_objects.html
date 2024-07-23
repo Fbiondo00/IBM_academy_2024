@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+
+<body>
+
+
+    <script>
+
+
+    class Person{
+
+
+
+        /*
+        Il costruttore di una Classe Javascript
+        si implementa utilizzando parola chiave constructor
+        */
+       constructor(firstName,lastName,age){
+
+        /*
+        La variabili di istanza in una classe Javascript
+        si inizializzano direttamente dentro il costruttore
+        utilizzando la parola chiave this (this si riferisce
+        alla classe)
+        */
+
+        /* In Javascript se nella stessa Classe
+        vengono dichiarati due metodi che hanno esattamente
+        lo stesso nome, pur se i parametri sono differenti,
+        il secondo sovrascrive il primo
+        (OVERRIDING DI METODI DENTRO LA STESSA CLASSE)
+        */
+
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.age=age;
+
+
+       } 
+
+       eat(){
+
+        alert("eat");
+
+       }
+
+       eat(){
+
+        alert("eat very well");
+
+       }
+
+       speak(){
+
+        alert("speak");
+
+       }
+
+
+    }
+
+
+    class Student extends Person{
+
+         constructor(firstName,lastName,age,passportNumber){
+
+            // RICHIAMO DEL COSTRUTTORE PADRE
+            super(firstName,lastName,age);
+            this.passportNumber = passportNumber;
+
+         }
+
+         study(){
+
+            alert("study");
+         }
+
+    }
+
+
+
+
+
+    /*
+    Per creare una istanza (oggetto) a partire da una
+    Classe occorre utilizzare la parola chiave new
+    + nome della Classe (passando in input alla lista
+    dei parametri lo stesso numero dei parametri dichiarati
+    nel costruttore)
+    */
+    let person = new Person("Giada","Bianchini",23);
+    person.eat();
+    person.speak();
+    let student = new Student("Mario","Rossi",22,"1028A");
+    student.eat();
+    student.speak();
+    student.study();
+
+    /*
+    Non esistono Interfacce in Javascript
+    Non è possibile implementare POLIMORFISMO DI OGGETTI in Javascript
+    NON E' POSSIBILE IMPLEMENTARE IL PATTERN LOOSE COUPLING IN JAVASCRIPT
+
+    TALI FRAGILITA' OOP SONO STATE SUPERATE DA Typescript (SUPERSET DI Javascript)
+    */
+
+    </script>
+
+
+</body>
+
+
+
+
+</html>

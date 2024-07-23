@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<body>
+
+<script>
+
+var firstName="Francesco";
+var lastName="Verdi";
+
+/*
+Tra var e let esiste una differenza
+di scope
+Se dichiarate al di fuori di un 
+code block sia let che var hanno
+global scope (visibilità globale
+all'interno dello script);
+invece se dichiarate all'interno di
+un code block var ha global scope
+mentre let ha code block scope
+*/
+if (firstName=="Francesco"){
+
+    var address="Via dei Mille";
+    let age=23;
+    console.log(age);
+
+}
+
+console.log(firstName);
+console.log(lastName);
+console.log(address);
+
+/*
+In Javascript esistono due operatori
+per effettuare confronto di uguaglianza
+== (equal operator)
+=== (strict equal)
+== confronta solo i valori indipendentemente dai tipi a runtime
+=== confronta sia i tipi che i valori; se i valori sono uguali ma i tipi sono differente viene restituito false
+*/
+
+
+console.log(1=='1');
+console.log(1==='1');
+
+
+
+</script>
+
+
+</body>
+
+
+
+
+
+</html>

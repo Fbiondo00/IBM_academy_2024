@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+
+<body>
+
+    <div id="p1"></div>
+    <div id="p2"></div>
+    <div id="p3"></div>
+
+    <script>
+
+    // VAR OBJECT
+    var person1 = {
+
+     firstName:"Mario",
+     lastName:"Rossi",
+     age:21
+
+    }
+
+    /*
+    UN LIVE OBJECT PUO' ESSERE MODIFICATO
+    RISPETTO ALLA SUA STRUTTURA ORIGINARIA
+    (A RUNTIME)
+    */
+    person1.address="Via dei Mille 21 00175 Roma";
+    delete person1.age;
+
+    // PROTOTYPE CLASSE
+    var person2 = new Object();
+    person2.firstName="Giulio";
+    person2.lastName="Verdi";
+    person2.age=23;
+    person2.address="Via Laurentina Roma";
+
+    delete person2.age;
+
+    // FUNCTION/CONSTRUCTOR OBJECT
+    function Person(firstName,lastName,age){
+
+     /*
+     La parola chiave this, se usata all'interno
+     di una funzione, consente di inizializzare
+     variabili locali alla funzione
+     */   
+     this.firstName=firstName;
+     this.lastName=lastName;
+     this.age=age;
+
+
+    }
+
+    /*
+    la parola chiave new viene associata al nome
+    della funzione e il JavaScript Engine interpreta
+    ciò come la necessità di creare un Oggetto con
+    contenuto valorizzato tramite gli argomenti
+    della funzione
+    */
+    var person3 = new Person("Maria","Proto",23);
+    person3.address = "Via Appia Roma";
+
+
+    // RENDERING DEL CONTENUTO DEL VAR OBJECT
+    document.getElementById("p1").innerHTML=person1.firstName + " " +
+    person1.lastName + " " + person1.age + " " + person1.address;
+
+    // RENDERING DEL CONTENUTO DEL PROTOTYPE OBJECT
+    document.getElementById("p2").innerHTML=person2.firstName + " " +
+    person2.lastName + " " + person2.age + " " + person2.address;
+
+     // RENDERING DEL CONTENUTO DEL FUNCTION/CONSTRUCTOR OBJECT
+     document.getElementById("p3").innerHTML=person3.firstName + " " +
+    person3.lastName + " " + person3.age + " " + person3.address;
+
+
+
+    </script>
+
+
+
+
+</body>
+
+
+
+
+</html>
