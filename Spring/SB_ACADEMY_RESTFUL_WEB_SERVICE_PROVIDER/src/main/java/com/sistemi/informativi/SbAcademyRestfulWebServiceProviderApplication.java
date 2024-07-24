@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 
+import com.hazelcast.config.Config;
+import com.hazelcast.config.MapConfig;
 
 /*
  * L'annotation @EnableCaching
@@ -12,7 +14,7 @@ import org.springframework.context.annotation.Bean;
  * di Hibernate
  */
 @SpringBootApplication
-//@EnableCaching
+@EnableCaching
 public class SbAcademyRestfulWebServiceProviderApplication {
 
 	public static void main(String[] args) {
@@ -28,7 +30,11 @@ public class SbAcademyRestfulWebServiceProviderApplication {
 	 * setInstanceName e setName (nel nostro
 	 * caso academies)
 	 */
-
+	@Bean
+	Config hazelCastConfig() {
+		return new Config().setInstanceName("hazelcast-instance")
+				.addMapConfig(new MapConfig().setName("academies").setTimeToLiveSeconds(20));
+	}
 
 
 }

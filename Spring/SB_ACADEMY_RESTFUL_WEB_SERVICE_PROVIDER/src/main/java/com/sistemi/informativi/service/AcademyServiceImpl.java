@@ -14,7 +14,7 @@ import com.sistemi.informativi.repository.AcademyRepository;
 import jakarta.persistence.EntityNotFoundException;
 
 @Service
-//@CacheConfig(cacheNames="academies")
+@CacheConfig(cacheNames="academies")
 public class AcademyServiceImpl implements AcademyService {
 
 	private AcademyRepository academyRepository;
@@ -43,7 +43,7 @@ public class AcademyServiceImpl implements AcademyService {
 
 	}
 
-	//@Cacheable(value = "code", key = "#code")
+	@Cacheable(value = "code", key = "#code")
 	@Override
 	public Academy getAcademyByCode(String code) {
 
