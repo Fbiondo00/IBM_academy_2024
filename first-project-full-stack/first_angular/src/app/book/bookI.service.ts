@@ -1,7 +1,8 @@
 import { Observable } from "rxjs";
 
 import { InjectionToken } from "@angular/core";
-import { Book } from "./model/book.model";
+import { Book } from "./mode/book.model";
+
 
 export const books_service_token = new InjectionToken<BookServiceI>('book_service_token');
 

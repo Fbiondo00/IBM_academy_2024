@@ -1,9 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Book } from '../model/book.model';
+
 import { books_service_token, BookServiceI } from '../bookI.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BookService } from '../book.service';
+import { Book } from '../mode/book.model';
 
 @Component({
   selector: 'app-index',
