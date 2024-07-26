@@ -3,8 +3,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Save New Book</title>
     <style>
-       body {
-            background: linear-gradient(to right, #000000, #dedede); /* Soft gradient background */
+        body {
+            background: linear-gradient(to right, #e0eafc, #cfdef3); /* Soft gradient background */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -15,16 +15,15 @@
         }
 
         .container {
-            background-color: #bcbcbc;
+            background-color: #ffffff;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 500px;
         }
-
-        h1 {
-            color: #000000;
+h1 {
+            color: #333;
             font-size: 28px;
             font-family: Arial, sans-serif;
             margin-bottom: 20px;
@@ -60,72 +59,57 @@
             box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
             margin-top: 5px;
         }
-.btn-primary {
-            background: linear-gradient(45deg, #938d8d, #000000);
+
+        .btn-primary {
+            background-color: #007bff;
             color: #ffffff;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 12px 24px;
             border: none;
             border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 16px;
             cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s, transform 0.3s;
+            transition: background-color 0.3s ease;
             display: block;
             width: 100%;
-            margin-top: 20px;
         }
 
         .btn-primary:hover {
-            background: linear-gradient(45deg, #938d8d, #000000);
-            transform: translateY(-2px);
+            background-color: #0056b3;
         }
-
-        .btn-primary:active {
-            background: linear-gradient(45deg, #938d8d, #000000);
-            transform: translateY(2px);
-		}
     </style>
 </head>
 <div class="container">
-    <h1>Save New Book</h1>
+    <h1>Save New Profile</h1>
 
-    <form [formGroup]="form" (ngSubmit)="submit()" ngNativeValidate>
+    <form [formGroup]="form" (ngSubmit)="submit()">
 
         <div class="form-group">
-            <label for="isbn">isbn:</label>
+            <label for="id">id:</label>
             <input
-                formControlName="isbn"
-                id="isbn"
+                formControlName="id"
+                id="id"
+				readonly
                 type="text"
-                class="form-control" requireda>
+                class="form-control">
         </div>
 
-        <div class="form-group" >
-            <label for="body">Title</label>
+        <div class="form-group">
+            <label for="body">firstName</label>
             <input
-                formControlName="title"
-                id="title"
+                formControlName="firstName"
+                id="firstName"
                 type="text"
-                class="form-control" required>
+                class="form-control">
         </div>
         <div class="form-group">
-            <label for="genre">genre</label>
+            <label for="lastName">lastName</label>
             <input
-                formControlName="genre"
-                id="genre"
+                formControlName="lastName"
+                id="lastName"
                 type="text"
-                class="form-control"required>
+                class="form-control">
         </div>
 
-		<div class="form-group" requ>
-			<label for="published">Published</label>
-            <select id="published" class="custom-select" formControlName="published" required>
-              <option value="" selected>Select status</option>
-              <option value="true">Published</option>
-              <option value="false">Not Published</option>
-            </select>
-          </div>
 		  <br>
 		  <br>
         <button class="btn btn-primary" type="submit">Submit</button>

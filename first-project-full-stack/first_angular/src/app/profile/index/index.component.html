@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Profile</h1>
+
+    <a href="#" routerLink="/profile/create/" class="btn btn-success">Create New Profile</a>
+
+    <table class="table table-striped">
+        <thead>
+              <tr>
+                <th>id</th>
+                <th>firstName</th>
+                <th>lastName</th>
+                <th>isbn</th>
+                <th width="250px">Action</th>
+              </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let book of profile">
+                <td>{{book.id}}</td>
+                <td>{{book.firstName}}</td>
+                <td>{{book.lastName}}</td>
+                <td>{{book.isbn}}</td>
+                <td>
+                  <button type="button" (click)="removeProfile(book.isbn)" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+        </tbody>
+    </table>
+ </div>
