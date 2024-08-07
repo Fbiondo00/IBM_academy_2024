@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ConnectionManager implements DbParameters{
-	
+
 	private static Connection con;
 	/**
 	 *
@@ -46,7 +46,6 @@ public class ConnectionManager implements DbParameters{
 	}
 
 	/**
-	 *
 	 * @param sql script che conterrà la logica di una operazione di lettura
 	 * @return una struttura JDBC ResultSet contenente i risultati di una operazione di lettura eseguita sul db
 	 * @throws SQLException
@@ -67,6 +66,6 @@ public class ConnectionManager implements DbParameters{
 	    getConnection().close();
 	}
 
-	
+
 
 }
