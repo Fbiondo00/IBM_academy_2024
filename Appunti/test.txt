@@ -1,0 +1,194 @@
+
+
+**==Astratta vs Interfaccia?==** Astratta definisce un comportamento comune, parola chiave = abstract. L'Interfaccia è un contratto per la classe che poi la implementerà, parola chiave = interface
+
+**==cosa rappresentano le varibili?==** sono dei campi che rappresentano lo stato di un oggetto. Rappresentano **valori** che possono cambiare nel corso dell'esecuzione di un programma.
+
+
+**==Cos'è una entity in JPA?==** In JPA, un'**[entity]** è semplicemente una classe Java che rappresenta un oggetto che vogliamo salvare in un database.
+
+**==Perchè si usa JPA?==**  Per eseguire operazione di CRUD su un database relazionale.
+
+**==Cos'è un' EntityManager?==**  È un interfaccia che espone dei metodi che se richiamati correttamente comunicano al PP, la necessità di effettuare operazioni di traduzione da Java in SQL
+
+### ==Legame tra il pattern Singleton e Spring?==
+annotation di stereotype
+Il pattern Singleton e Spring lavorano insieme per rendere il tuo codice più organizzato e efficiente e per creare e gestire oggetti unici in un'applicazione Java.
+ **Perché è utile?**
+    - **Risorse condivise:** Se hai una risorsa che deve essere condivisa da tutto il programma (come un database o un file di configurazione), puoi usarla come Singleton per assicurarti che tutti accedano alla stessa copia.
+    - **Configurazione globale:** Puoi creare un Singleton per contenere tutte le impostazioni del tuo programma in un unico posto.
+
+- **Singleton:** Una sola copia di una classe.
+- **Spring:** Un magazzino che gestisce le classi.
+- **Insieme:** Spring rende facile creare e gestire oggetti Singleton.
+
+---
+
+**==Spiegazione pattern DAO?==**  Il pattern DAO è come il bibliotecario.**[Il bibliotecario]** È un oggetto che **[si occupa di interagire con un database ] (gli scaffali dei libri).**
+ Invece **[il tuo programma]** **[Chiede al DAO di trovare un dato specifico]** (un libro) [e il DAO] si occupa di tutte le operazioni necessarie per **[recuperarlo dal database.]**
+
+**Il pattern DAO si usa anche per** **[Semplificare il codice nascondendo la complessità dell'accesso al database]** **;** Si usa per la **[Manutenibilità, infatti cambiando il database si modifica solo il DAO]** **;** Si usa anche per la **[Riusabilità del codice.]**
+
+**[Il pattern DAO è uno strumento utile per separare la logica di business (quello che il tuo programma fa) dalla logica di accesso ai dati (come ottiene i dati dal database).]**
+
+
+**==Perchè viene utilizzato il pattern Factory? ==** **[Il pattern Factory è un modo per creare oggetti in modo indiretto, nascondendo la logica di creazione e permettendoti di concentrarti sulla logica del tuo programma.]** Il pattern Factory è uno strumento utile per rendere il tuo codice più flessibile, riutilizzabile e facile da capire.
+
+**==Come funziona il Pattern Facade?==** Il pattern Facade (facciata), **[fornisce un unico punto di accesso centralizzato all'applicazione invocante per accedere alle funzionalità dell'applicazione invocata]**.
+
+**==Cos'è il pattern MVC?==** Il pattern MVC, divide l'applicazione in tre strati, e ogni strato ha delle proprie responsabilità. Infatti il **[Model si occupa della gestione dei dati]** e delle operazioni di CRUD, **[il View che mostra i dati]** e **[il Controller]** (simile alle Servlet) **[che fa da tramite]** tra Model e View.
+
+**==Perchè l'MVC si divide in 3 parti?==** per la **[Riusabilità]**, per la **[Chiarezza]** dato che nell'applicazione si separano le responsabilità, **[per test facilitati]** e per la **[Collaborazione]** dato che diversi sviluppatori lavorano su diverse parti del progetto.
+
+**==Per cosa è stato fatto spring?==** Spring è un framework modulare di Java, utilizzato per l'implementazione di applicazioni Enterprise e applicazione Stand Alone.
+
+**==come utilizzi un componente in spring?==** **[I componenti in Spring ti permettono di costruire la tua applicazione in modo modulare e riutilizzabile.]** Spring si occupa di creare e collegare tra loro questi componenti, semplificando notevolmente lo sviluppo.
+1. **Creazione del componente:**
+
+    - Definisci una classe Java e la annoti con `@Component`, `@Service`, `@Repository` o `@Controller`. **[Queste annotazioni indicano a Spring che quella classe è un componente e deve essere gestito dal framework.]**
+2. **Configurazione di Spring:**
+
+    - In un file di configurazione (solitamente `application.properties` o `application.yml`), oppure tramite annotazioni, indichi a Spring dove cercare i tuoi componenti. Questo processo si chiama "component scanning".
+3. **Iniezione delle dipendenze:**
+
+    - Se un componente ha bisogno di utilizzare altri componenti, puoi "iniettare" questi ultimi direttamente nel tuo componente. Spring si occuperà di creare le istanze corrette e di collegarle tra loro. Questo processo si chiama "dependency injection".
+
+
+
+**==Cos'è una Primary Key?==**
+Una chiave primaria è un codice univoco per ogni record o riga di una tabella.
+**[In un database, ogni riga (o record) di una tabella deve avere una o più colonne che la identificano in modo univoco. Queste colonne formano la chiave primaria.]**
+
+**==Cosa sono gli Indici? E a cosa servono? (Database)==**  Un' indice è una Struttura Dati che contiene **[informazioni su come sono organizzati i dati all'interno di una tabella. E sono realizzati per migliorare e velocizzare i tempi di ricerca dei dati (query).]**
+
+**==Cos'è una Stored Procedure?==**  Nel mondo dei database, è **[un'insieme di istruzioni SQL che vengono salvate e possono essere eseguite con un unico comando]**.
+Le Stored Procedure sono ***Efficienti***, ***riutilizzabili e sicure***.
+Le Stored Procedure sono un potente strumento per automatizzare operazioni ripetitive e migliorare l'efficienza di un database.
+
+cos'è logicamente un browser?
+cos'è il rest?
+
+**==Scrivi le operazione di insert, update e delete?==**
+Insert into customer (name , email ) value (‘Flavio’ , ' f@gmail.com’)
+update customer (email) set email= f@gmail.com where id =1
+delete  from customer where id=1
+
+**==Come si gestiscono le Transazioni?==** con @Transactional
+Quando un metodo annotato con @Transactional viene chiamato, Spring avvia una transazione, esegue il metodo e poi tenta di commettere la transazione. Se durante l'esecuzione del metodo si verifica un'eccezione, Spring farà un rollback della transazione, annullando tutte le modifiche fatte dal metodo al database.
+
+---
+
+
+**==Differenza fra Spring e Spring boot?==**
+**[Spring]** è un framework Java che offre un ecosistema completo per lo sviluppo di applicazioni enterprise. È molto potente e flessibile, ma richiede una configurazione dettagliata, infatti si usa per progetti molto complessi.
+**[Spring Boot]** **==è un'estensione di Spring==** che semplifica notevolmente lo sviluppo di applicazioni Spring. Offre configurazioni automatiche e integra già molte funzionalità comuni.È perfetto per creare rapidamente prototipi e applicazioni più piccole. È molto più veloce rispetto a ***Spring*** grazie alle configurazioni automatiche e agli **==starter==**
+
+
+**==Come funziona l'accesso al Database per Spring e per Spring Boot?==**
+**[Spring]:** Ti dà tutti gli strumenti per connetterti al database, ma **[devi configurare manualmente ogni dettaglio]**. Devi specificare l'**[URL del database, il nome utente, la password, il driver JDBC]** e altre proprietà.
+**[Spring Boot]:** Ha già preparato una configurazione di base per connettersi al database. **[Devi solo fornire alcune informazioni di base (URL, credenziali) e Spring Boot si occuperà del resto.]**
+
+**==Cos'è una query di Join?==** Una query di join **[è un'istruzione che permette di combinare righe da due o più tabelle di un database, basandosi su un campo comune]**. In pratica, "cuci" insieme le informazioni provenienti da tabelle diverse, **[creando una nuova vista dei dati più completa e informativa]**.
+
+
+
+qual è la politica del caricamento del DOM? di default ogni volta che viene compiuta un'operazione da parte di un'utente su un'applicazione scritta in angular, pur se l'operazione viene compiuta su un singolo elemento del DOM, di default node.js, ricarica tutto il DOM
+
+la politica di change direction nativa di angular è una politica tale per cui anche se il DOM subisce una modifica parziale, avviene il ricaricamento  di tutto il DOM a prescindere
+
+E' possibile (best practice) chiedere a Node.js di modificare questa politica applicativa di default, cambiando la strategia di change detection
+
+Jpa è java EE, e non spring data jpa
+
+
+**==Cos'è una risorsa?==** Possono essere qualsiasi cosa di valore, siano essi **[Dati o Pagine Web dentro un'Applicazione.]**
+
+**==Come raggiungo una risorsa?==** si compone di due parti, nome della risorsa(URI che è il suo identificativo) e locazione della risorsa(URL)
+esempio URI: /user/{ Id }
+
+/http:8080/api/v1/web/user/{ Id }
+l' { Id } è una  PathVariable
+
+@RequestBody mappa il corpo della richiesta http direttamente all'oggetto
+
+@RequestMapping specifica il percorso di base per tutte le richieste http gestite da quel controller
+
+
+
+**==Differenze tra Spring Data JPA e JPA?==** **Entrambi utilizzano l'Entity Manager solo che in Spring Data JPA è automatizzato, invece in JPA si deve inizializzare. E in JPA si deve implemen**
+
+
+
+**==Quando si dicono due reference uguali?==** due reference sono uguali se referenziano esattamente la stessa area di memoria nell'HEAP
+
+per confrontare due metodi, usiamo il metodo equals ma prima si deve overridare hash e equals
+
+== per reference  e primitivi
+
+equals tra oggetti (override di equals e hashcode)
+
+enum è un tipo ed è struttura dati rigida che non può essere cambiata
+
+==**Cos'è una query SQL?**== **[Una query SQL è una richiesta che facciamo a un database per ottenere informazioni specifiche.]**
+Le query SQL sono strumenti potenti che ci permettono di interagire con i database relazionali in modo preciso e efficiente. Sono essenziali per estrarre informazioni utili da grandi quantità di dati.
+**In termini più tecnici,** **[una query SQL è una frase scritta in un linguaggio speciale chiamato SQL (Structured Query Language) che viene utilizzata per comunicare con un database relazionale.]**
+
+
+==**Cos'è un ResultSet?**==
+
+Immagina di eseguire una query SQL che estrae dei dati da un database. Il risultato di questa query, ovvero l'insieme di righe che corrispondono alla tua richiesta, viene memorizzato in un oggetto chiamato **ResultSet**. Puoi pensarlo come una tabella temporanea che contiene i dati estratti dalla tua query.
+
+
+**Cos'è il metodo next()?**
+
+Il metodo `next()` è un metodo associato a un ResultSet. Serve per "navigare" all'interno di questo insieme di risultati, riga per riga.
+
+- **Come funziona?** Immagina di avere un puntatore che inizialmente si trova prima della prima riga del ResultSet.Quando chiami `next()`, questo puntatore si sposta alla riga successiva.
+- **Cosa restituisce?** Il metodo `next()` restituisce un valore booleano (true o false):
+    - **true:** Se esiste una riga successiva, cioè se ci sono ancora dati da leggere.
+    - **false:** Se non ci sono più righe, ovvero se hai raggiunto la fine del ResultSet.
+
+**Un esempio pratico:**
+```
+// ... codice per connettersi al database e eseguire una query ...
+ResultSet rs = statement.executeQuery("SELECT * FROM clienti");
+
+while (rs.next()) {
+    String nome = rs.getString("nome");
+    String cognome = rs.getString("cognome");
+    System.out.println("Nome: " + nome + ", Cognome: " + cognome);
+}
+
+```
+
+
+ ==Cos'è la Dependency Injection?==
+**In termini più tecnici,** **[la DI è un pattern di progettazione che permette di iniettare le dipendenze di una classe all'esterno, invece di farle creare all'interno della classe stessa]**. In questo modo si riduce l'accoppiamento tra le classi, rendendo il codice più:
+
+- **Modulare:** Ogni classe si concentra sulla propria responsabilità.
+- **Testabile:** È più facile testare una classe in isolamento, fornendole delle dipendenze fittizie (mock).
+- **Manutenibile:** Le modifiche a una classe hanno meno impatto sulle altre classi.
+- **Riusabile:** Le classi sono più facili da riutilizzare in contesti diversi.
+
+
+### ==Cos'è la JTA?==
+**[La JTA è una specifica Java che definisce]** un'API standard per **[la gestione delle transazioni in ambienti distribuiti.]** In pratica, la JTA permette di coordinare più risorse transazionali, come database, sistemi di messaging o altri sistemi esterni, all'interno di una singola unità di lavoro.
+La JTA è la tecnologia chiave per la gestione delle transazioni in Java EE. Essa fornisce un meccanismo robusto e flessibile per coordinare le operazioni su più risorse e garantire la consistenza dei dati. La JPA, invece, si concentra sulla persistenza degli oggetti e utilizza la JTA per gestire le transazioni relative al database.
+
+
+==**Cos'è un'entità JPA?**==
+**In modo più formale,** **[un'entità JPA è una classe Java che viene mappata a una tabella in un database relazionale.]** Ogni istanza di questa classe rappresenta una riga nella tabella.
+
+
+==**cos'è un AOP e Interceptor?**==
+**AOP (Aspect-Oriented Programming)** e **Interceptor** sono come dei "moduli aggiuntivi" che puoi inserire nella tua applicazione Spring per aggiungere comportamenti trasversali, cioè che riguardano più parti del tuo codice.
+[AOP e Interceptor sono strumenti potenti che ti permettono di migliorare la modularità, la manutenibilità e l'estensibilità delle tue applicazioni Spring.]
+
+L'annotazione **@Autowired** è lo strumento principale utilizzato in Spring per implementare l'iniezione delle dipendenze. Essa semplifica notevolmente la configurazione delle applicazioni, rendendole più modulari e manutenibili.
+
+
+
+
+**==Cosa sono i routing guards e a cosa servono in Angular?==**
+I routing guards sono un meccanismo di sicurezza fondamentale in Angular. Ti permettono di controllare l'accesso alle diverse pagine del tuo sito web in base a determinate condizioni. Sono facili da implementare e ti offrono un gran controllo sulla navigazione dell'utente.
+controllano chi può accedere a una particolare pagina o sezione del tuo sito web.

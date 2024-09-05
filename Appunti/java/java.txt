@@ -1,0 +1,237 @@
+oggetto: una delle N possibili instanze di una classe
+classe: componennte applicativa rappresentata da varibili e metodi
+(prototipo di un oggetto )
+
+
+ci sono 3 componenti applicative:
+- CLASSE CONCRETA
+    -Una classe concreta è una classe che può contenere solo metodi concreti. Ovvero
+    metodi che hanno sia una firma sia un corpo.
+    -Dal punto di vista sintattico per creare una classe completa basta usare la parola
+    chiave "class" senza usare altre parole chiave.
+- CLASSE ASTRATTA
+    -Una classe astratta è una classe che puo contenere sia metodi astratti che concreti.
+    un metodo astratto è un metodo caratterizato da firma senza corpo.
+    -dal punto di vista sintattico per creare una classe astratta occorre utilizzare
+    la parola chiave "abstract" prima di class.
+    -una classe astratta puo avere dei figli.
+- INTERFACCIA
+    -Una componente applicativa che puo contenere solo metodi astratti.
+    - dal punto di vista sintattico una interfaccia si deve creare utilizzando
+      la parola chiave "interface"
+    -una interfaccia non puo essere mai istanziata, ovvero non è possibile
+        generare oggetti
+
+
+-- STRUTTURA DATI --
+
+è uno strumento applicativo (ovvero sintassi del linguaggio) che consente
+di elaborare,trattare,archiviare(meglio),storicizzare piu informazioni o dati contemporaneamente.
+in generale una struttura dati è fatta da locazione di memoria, poi la struttura puo essere indicizzata, ordinata, disordinata.
+
+java mette a disposizione due tipologie di strutture dati:
+- struttura dati statica
+    - struttura la cui dimensione deve essere fissata in fase di inizializzazione e
+      non può essere mai variata
+      Java mette a disposizione solo l ARRAY .
+- struttura dati dinamica
+    - la cui dimensione non deve essere necessariamente fissata in fase di
+      inizializzazione e puo essere variata a runtime
+    Java offre piu varianti: HashMaP, HashSet, queue, deque
+
+|                    | Array    | ArrayList | HashSet  | HashMap           | Stream        |
+| ------------------ | -------- | --------- | -------- | ----------------- | ------------- |
+|                    |          |           |          |                   | FLUSSO DATI   |
+| Collection         | no       | si        | si       | no                | no            |
+| Tipologia          | statica  | dinamica  | dinamica | dinamica          | dinamica      |
+| Indicizzata        | si       | si        | no       | si (NON ORDINATA) | no (ORDINATA) |
+| Eterogenea         | Omogenea | si        | si       | si                | si            |
+| Primitivi          | si       | no        | no       | no                | no            |
+| Oggetti(reference) | no       | si        | si       | si                | si            |
+| Duplicati          | si       | si        | no       | si                | si            |
+in java 8  è stata inserita questa struttura dati.
+STREAM è una API, è struttura dati dinamica. (o flusso di dati dinamico)
+- Puo essere sia OMOGENEA che DISOMOGENEA  (caratt. tipica strutt. dinamiche)
+- Puo contenere solo reference ad oggetti
+- Ordinata ma non indicizzata(NON essendoci locazione di memoria non puo esserci indice, ma è ordinata)
+- Ammette duplicati (solo hashset non ammette duplicati)
+STREAM
+	interagire con grossi moli di dati
+si implementa tramite API Stream -> FUNZIONALE
+Stream.*of*("a", "b"); ->inizializzazione
+*Filter*-> Stream di partenza restituisca un nuovo stream con la nuova condizione richiesta al filter
+*Map*->
+*forEach*->
+
+
+INHERITANCE (ereditarietà)
+
+in java a partire da una componente applicativa è possibile creare una
+o piu componenti applicative figlie.
+
+Polimorfismo
+**NON PUO' ESISTERE SENZA L'EREDITARIETA'**
+
+OGGETTI
+	*vuol dire far assumere ad una reference di tipo padre la forma di uno dei suoi oggetti figlio a RUNTIME, limitatamente ai metodi comunNi
+METODI
+	@Overload
+
+
+Servlet (o meglio HttpServlet)-> prima componente applicativa lato server, in grado di gestire
+        le richieste http provenienti da client e restituire le risposte http inviate al client.
+        rilasciata sotto forma di SLO (specialized object)
+            - In generale in java una SLO è una classe concreta non istanziabile applicativamente
+              dallo sviluppatore tramite parola chiave new, ma viene istanziata
+              da componente infrastrutturale chiamata WEB CONTAINER
+==**CICLO DI VITA**==
+5 fasi:
+	==LOADING==:
+		quando il Servlet Engine trova una classe con annotation @WebServlet + una URI corrispondente all'URL della richiesta.
+	==ISTANZIATION==:
+		Creazione di un istanza (Thread) della servlet.
+	==INITIALIZATION==:
+		vengono invocati alcuni dei metodi dell'interfaccia Servlet, tra cui il metodo init();
+	==SERVICE METHOD INVOCATION==:
+		il Web Container controlla se vi sono presenti metodi di servizio (POST, GET) e li utilizza
+	==DESTROY:==
+		alla scadenza della sessione viene deallocato
+
+ESEMPIO WEB CONTAINER : TOMCAT
+    jvm complesse = stack-heap-servlet_engine
+
+ESEMPIO APPLICATION SERVER: IBM WEBSPHERE (paid), GLASSFISH (APACHE), JBOSS, ORACLE WEBLOGIC (paid), TOMCAT EE.
+        jvm complessa = web container + ejb container
+       Le servlet sono SLO il cui ciclo di vita viene gestito dal web container.
+          Le EJB     sono SLO il cui ciclo di vita viene gestito dalL ejb container, nell application server.
+
+Una EJB versione 3.X piu essere di due tipologie, mutualmente esclusive:
+
+- Session Bean
+    - Pensata per applicazioni sincrone. Ne esistono 2 sotto-tipologie:
+        - STATELESS
+            Una session bean stateless è una ejb  che, durante la durata dell intervallo di sessione, non
+            mantiene memoria conversazionale con il client, cioe non è in grado di riconoscere diverse e sucessive richieste provenienti dallo stesso client
+        - STATEFUL
+            Una session bean stateful è una ejb  che, durante la durata dell intervallo di sessione,
+            mantiene memoria conversazionale con il client, cioe  è in grado di riconoscere diverse e sucessive richieste provenienti dallo stesso client
+            La gestione a runtime di una stateful è piu onerosa per la ejb container, rispetto alla gestione delle
+            ejb stateless.
+IL PROTOCOLLO HTTP è STATELESS (SENZA STATO)
+Ovvero non conserva memoria tra il flusso della richiesta effettuata da un client e il flusso della risposta
+restituita dal server.
+Ovvero non ha memoria conversazionale tra client e server, cioe non è in grado di tenere memoria delle informazioni
+inviate dal client al server in fase di richiesta, rispetto alla fase di risposta restituita allo stesso client
+
+
+tipologia richieste (get, post, put, delete)
+c
+Il Servlet Engine fornisce l'ambiente di runtime per le servlet, gestisce il loro ciclo di vita (caricamento, inizializzazione, esecuzione, e distruzione)
+e facilita la comunicazione tra le servlet e il server web, garantendo anche funzionalità di gestione delle sessioni e sicurezza.
+ Esempi comuni includono Apache Tomcat e Jetty.
+
+
+il json è molto piu espressivo e conciso, il xml è prolisso
+
+
+
+L architettura rest specifica una serie di status code di risposta per ogni verbo HTTP esposto
+relativamente ad un operazione di un web service provider
+
+
+IoC != dependency injection .
+
+Ioc è il pattern. dependency injection rappesenta l implementazione di esso.
+dependency injection è l'implementazione del pattern Ioc(Secondo questo pattern è possibile chiedere ad una componente infrastrutturale
+la creazione di una istanza(oggetto) senza che applicativamente venga utilizzato
+il costrutture della classe.)
+
+il pattern IOC QUANDO DELEGHI L'INSTANZIAMENTO DELL'OGGETTO AD UNA COMPONENTE infrastrutturale
+
+
+La programmazione concorrente è un paradigma di programmazione che consente l'esecuzione di più processi o thread in parallelo, migliorando l'efficienza e le prestazioni di un programma,
+soprattutto in contesti in cui sono disponibili più risorse di calcolo
+
+
+Un'API è un'interfaccia che permette a diverse applicazioni o componenti di un software di interagire tra loro
+Le "API call" (chiamate API) sono le richieste effettuate da un client (che può essere un'applicazione, un servizio web o persino un browser) a un'API per accedere a una risorsa, eseguire un'azione o ottenere un dato specifico.
+
+
+
+Il pattern MVC = MODEL, VIEW, CONTROLLER =  afferma che ogni applicazione enterprise (Web) dovrebbe essere suddivisa  (scomposta)
+in tre strati applicativi  (application layers), ad ognuno dei quali vengono assegnati dei nomi e dei ruoli.
+
+Model:
+    - Gestione dei dati applicativi relativi al database
+View:
+    - Presentazione dei dati
+Controller:
+    -Gestione delle richieste HTTP provenienti dal client
+    - gestione risposte HTTP da dare al client
+    - gestione della business logic
+
+
+Il pattern MVC viene denominato anche patter Three-Tier
+
+Una annotation è uno strumento sintattico rappresentato dal simbolo @ seguito
+da una parola chiave
+In java esistono due tipi di annotation:
+- di tipo COMMENTO:  sono dei commenti eleganti, invece di scrivere //. sono utili
+    per chi legge il codice e non vengono interpretate in alcun modo a runtime
+- di tipo METADATO: sono delle vere e proprie istruzioni per il runtime environment
+    che in base a tali istruzioni esegue un comportamento specifico
+
+
+il trasferimento dello stato di rappresentazione di un qualcosa (ogetto ecc ..)
+
+REST sta per Representational State Transfer. È uno stile architettonico utilizzato per la progettazione di servizi web
+ che permette ai sistemi di comunicare tra loro in modo semplice e scalabile attraverso il protocollo HTTP.
+
+ In una architettura REST esistono due attori fondamentali nello scambio delle
+informazioni:
+
+- WEB SERVICE CONSUMER(quello che chiede)
+    è una applicazione che consuma operazioni esposte sotto forma di xml/json e tramite protocollo
+    di HTTP, da un web service provider
+- WEB SERVICE PROVIDER(quellomche da)
+    è una applicazione raggiungibile via protocollo HTTP che espone operazioni in modalità agnostica
+    (senza che il web service consumer conosca la tecnologia di implementazione) sotto forma di xml/json .
+
+Ecco come vengono utilizzati i metodi HTTP principali in un'architettura REST:
+
+GET: Recupera una risorsa.
+POST: Crea una nuova risorsa.
+PUT: Aggiorna o sostituisce una risorsa esistente. non ritorna mai loo stesso elemento
+DELETE: Cancella una risorsa.
+detach modifiche parziali
+
+
+CLASSE WRAPPER RENDE UN TIPO PRIMITIVO UN OGGETTO
+
+Una eccezione JAVAin generale è una anomalia verificabile solo ed esclusivamente a runtime dalla JVM
+
+
+Il compilatore genera errori a compile time, ma non sono eccezioni.
+
+In java esistono due tipi di eccezioni:
+1. Eccezioni API
+    - Eccezioni Unchecked
+        E' una eccezione che viene autonomamente restituita dalla JVM nel caso in cui venga rilevata, senza che
+        lo sviluppatore scriva del codice per chiedere di restituirla. Esempio. OutOfMemory Exception.
+    - Eccezioni Checked
+        Le eccezioni che devono essere gestite applicativamente dallo sviluppatore per chiedere alla JVM di catturarla(restituirla) in caso di errore di determinato tipo.
+2. Eccezioni Custom
+
+
+tutte le eccezioni dirette e indirette figlie di runtime Exception sono Unchecked Exception
+
+Tutte le eccezioni non facenti parte come figli dal ramo  di runtime Exception sono eccezioni Checked
+
+LOOSE COUPLING (debole accoppiamento o disaccoppiamento)
+Secondo questo pattern è preferibile disaccoppiare una applicazione invocante
+da un applicazione invocata. Ovvero fare in modo che l applicazione invocante
+possa colloquiare con l applicazione invocata senza conoscerne i dettagli
+implementativi
+
+L applicazione del polimorfismo di oggetti java con reference di tipo interfaccia padre e oggetto di tipo classe concreta figlia rende possibile l implementazione
+intrinseca del pattern loose coupling.

@@ -1,0 +1,46 @@
+`application.properties` è un file di configurazione utilizzato nelle applicazioni Spring Boot
+ per configurare varie impostazioni dell'applicazione. Questo file permette di centralizzare
+le configurazioni in un unico posto, semplificando la gestione e la manutenzione.
+
+**Configurazione del Database:**
+
+- Configurazioni per connettersi a un database MySQL.
+- Configurazione del Server Configurazione della porta del server e altre impostazioni del server.
+- Configurazioni che utilizzano variabili d'ambiente.
+
+Le proprietà definite in `application.properties` possono essere facilmente accessibili nelle componenti Spring
+(come i controller, i service, ecc.) utilizzando l'annotazione `@Value` o attraverso la classe `Environment`.
+
+
+   - maven è   building tool = compilatore librerie esterne (dipendenze)
+     - configurato con file pom.xml -> rappresenta il master file di maven
+         - all interno del file si può indicare il nome delle dipendenze in maniera tale
+           che maven si colleghi via web al maven repository e scarichi le dipendenze
+           richieste, inserendole automaticamente senza intervento manuale.
+         - Ogni pom.xml di maven deve essere identificato da due stringhe:
+         -groupId
+        -artifactId
+            - convenzioni entrambe uguale a nome progetto
+        - gradle
+            - rispetto a maven cambia che si chiama build.gradle. è simile a json. è piu leggero, lightweight
+
+
+
+SPRING E springboot
+ Configurazione di un'applicazione Web
+
+In Spring Boot, la configurazione di un'applicazione web è molto più semplice e non richiede un file web.xml o una configurazione esplicita
+ di un DispatcherServlet.
+ Il framework lo configura automaticamente:
+
+ Gestione delle Dipendenze
+ In Spring, devi gestire manualmente tutte le dipendenze nei file di configurazione di Maven o Gradle.
+
+ Spring Boot semplifica la gestione delle dipendenze con gli "Starter POMs". Basta includere uno starter,
+ e tutte le dipendenze necessarie sono automaticamente aggiunte:
+
+
+Spring offre flessibilità e controllo, ma richiede una configurazione più dettagliata.
+Spring Boot fornisce un'esperienza semplificata e ottimizzata, con configurazione minima,
+permettendo di avviare progetti più rapidamente e con meno codice boilerplate.
+

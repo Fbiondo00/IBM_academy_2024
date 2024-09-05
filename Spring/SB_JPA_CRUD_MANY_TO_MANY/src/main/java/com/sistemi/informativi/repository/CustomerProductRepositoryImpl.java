@@ -14,27 +14,27 @@ import jakarta.persistence.PersistenceContext;
 @Transactional
 @Repository
 public class CustomerProductRepositoryImpl implements CustomerProductRepository{
-	
+
 	@PersistenceContext
 	private EntityManager em;
 
 	@Override
 	public void addCustomer(Customer customer) {
-		
+
 		em.persist(customer);
-		
+
 	}
 
 	@Override
 	public void addProduct(Product product) {
-		
+
 		em.persist(product);
-		
+
 	}
 
 	@Override
 	public List<Customer> getCustomersByProduct(int productId) {
-		
+
 		return em.find(Product.class, productId).getCustomers();
 	}
 

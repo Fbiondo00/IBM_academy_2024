@@ -1,0 +1,166 @@
+
+Il pattern MVC = MODEL, VIEW, CONTROLLER =  afferma che ogni applicazione enterprise (Web) dovrebbe essere suddivisa  (scomposta)
+in tre strati applicativi  (application layers), ad ognuno dei quali vengono assegnati dei nomi e dei ruoli.
+
+Model:
+    - Gestione dei dati applicativi relativi al database
+View:
+    - Presentazione dei dati
+Controller:
+    -Gestione delle richieste HTTP provenienti dal client
+    - gestione risposte HTTP da dare al client
+    - gestione della business logic
+
+
+**==Angular==**
+**[E' un Framework Google/Microsoft fondato sull'utilizzo del linguaggio TypeScript che implementa il MVC (Model View Controller) Front End.]**
+TECNOLOGIE FRONT END:
+
+HTML(HYPERTEXT MARKUP LANGUAGE)
+    - consente di definire la struttura (layout) di pagina web
+    - ogni pagina web strutturata con utilizzo di linguaggio html
+      puo essere vista come un dom(document object model)
+Limite: è un  linguaggio statico, ovvero non conosente di effettuare variazioni del dom in base al verificarsi di
+        eventi condizionati da azioni che vengono eseguite da un utilizzatore della pagina.
+
+JAVASCRIPT:
+    - è un linguaggio aderente a due paradigmi: OOP e FUNZIONALE, è EVENT DRIVEN (in grado di modificare dinamicamente il DOM originario strutturato da html), UNTYPED (non tipizzato, ovvero non occorre associare
+    a variabili/funzioni/metodi tipi in fase di scrittura di codice, ma i tipi verranno assegnati a runtime
+    dal runtime environment: javascript engine),[E' un linguaggio Interpretato (non compilato) da un Runtime Environment di nome ==JavaScript Engine== (intrinsecamente esistente all'interno di ogni browser).]*
+
+
+STRUTTURE DATI JAVASCRIPT
+
+In JavaScript, Esistono 3 tipologie ( ==*TUTTE DINAMICHE*== (il dinamismo contiene il concetto di statico da poter applicare))
+•⁠  ⁠*[ARRAY]*
+•⁠  ⁠*[SET]*
+•⁠  ⁠*[MAP]*
+
+Gli *[Array JS]* ==sono diversi== dagli *[Array di Java], perchè quello *JS è Dinamico e quello Java è Statico**
+
+
+
+
+Le funzioni anonime sono funzioni che non hanno un nome. Sono spesso utilizzate in contesti in cui una funzione è necessaria per un breve periodo,
+ come quando si passano funzioni come argomenti ad altre funzioni. In JavaScript, è comune utilizzare funzioni anonime
+  all'interno di metodi di array, come map, filter, reduce, ecc.
+
+Una callback function è una funzione passata come argomento a un'altra funzione, che viene eseguita dopo che la funzione principale ha terminato. Le callback possono essere sincrone o asincrone.
+
+Callback Sincrone: Vengono eseguite immediatamente e in modo sequenziale nel flusso del codice.
+
+Callback Asincrone: Vengono eseguite in un secondo momento, spesso dopo un'operazione che richiede del tempo, come una richiesta di rete.
+
+ Differenza tra const, let e var
+var: È stato il modo principale di dichiarare variabili fino a ECMAScript 6 (ES6). var ha scope di funzione o globale se dichiarato fuori da una funzione. Le variabili dichiarate con var sono soggette a hoisting, il che significa che possono essere utilizzate prima della loro dichiarazione (ma il valore sarà undefined).
+
+
+let: Introdotto in ES6, let ha scope di blocco, il che significa che la variabile è visibile solo all'interno del blocco di codice in cui è dichiarata. Non è soggetta a hoisting come var.
+
+const: Anche const ha scope di blocco come let, ma, a differenza di let, le variabili dichiarate con const non possono essere riassegnate. Tuttavia, gli oggetti e gli array dichiarati con const possono ancora essere mutati.
+
+
+Un oggetto in JavaScript è una raccolta di proprietà, dove ogni proprietà è una coppia chiave-valore. Le chiavi sono stringhe, e i valori possono essere di qualsiasi tipo, compresi altri oggetti e funzioni.
+
+Un array in JavaScript è una struttura dati che contiene una lista ordinata di elementi. Può contenere elementi di qualsiasi tipo di dato.
+
+push(): Aggiunge uno o più elementi alla fine dell'array.
+pop(): Rimuove e restituisce l'ultimo elemento dell'array.
+map(): Crea un nuovo array con i risultati della funzione chiamata su ogni elemento dell'array originale.
+forEach(): Esegue una funzione su ogni elemento dell'array, ma non restituisce un nuovo array.
+
+
+Spread Operator (...): Espande un array o un oggetto in singoli elementi. È utile per copiare o combinare array e oggetti.
+Rest Operator (...): Raggruppa i restanti elementi o parametri in un array. Viene spesso utilizzato nelle funzioni per accettare un numero variabile di argomenti.
+
+Tecnologie di Styling per le pagine web :
+**==CSS==** ,  **==SASS==** ,  **==LESS==** ,  **==BOOTSTRAP==** ,  **==ANGULAR MATERIAL==**
+
+
+**[Cos'è un Linguaggio che aderisce al Paradigma Funzionale?]**
+JS è un linguaggio **Funzionale**, ovvero un Linguaggio dove tutto può assumere la forma di una funzione.
+Un linguaggio dove ad una variabile può essere assegnata una funzione, anche con una variabile si può assegnare una funzione.
+
+
+
+**==Cos'è il CSS?==**
+**[Il CSS]** è come un pennello e un set di colori che ti permettono di decorare e personalizzare (la tua pagina web)]** questa casa. 
+Ma il CSS non ti permette di costruire o demolire muri: **[si occupa solo dell'aspetto estetico.]**
+Alterare il DOM significa aggiungere, rimuovere o modificare direttamente gli elementi della struttura della pagina.
+
+**==Cos'è una Component in Angular?==**
+**Un componente in Angular è come un mattoncino che costruisce l'interfaccia utente di un'applicazione.** 
+È l'unità fondamentale dell'architettura di Angular e rappresenta una **[porzione autonoma dell'interfaccia]**,
+con le sue specifiche funzionalità e aspetto visivo.
+**Un componente Angular contiene :**
+**[la logica del componente, ovvero le regole e le azioni che il componente può eseguire.]** 
+**E gli Stili CSS:** Definiscono come i colori, i font, i layout e le animazioni.
+
+
+### ==Cosa sono i lifecycle hooks?==
+**[I lifecycle hooks sono] proprio questi ["momenti chiave" nella vita di un componente Angular].**
+ Sono dei metodi speciali che vengono chiamati automaticamente
+in determinati momenti del ciclo di vita del componente.Questi momenti **[ci permettono di eseguire del codice personalizzato,
+ come inizializzare dei dati, sottoscrivere degli eventi
+ o eseguire delle pulizia quando il componente viene distrutto.]**
+
+Quali sono i principali lifecycle hooks?
+- **ngOnInit():** Viene chiamato una sola volta dopo che il componente è stato inizializzato. È il posto ideale per inizializzare i dati e le proprietà del componente.
+- **ngOnChanges():** Viene chiamato ogni volta che le proprietà di input del componente cambiano.
+- **ngDoCheck():** Viene chiamato dopo ogni ciclo di controllo dei cambiamenti. È meno comunemente usato e serve per eseguire controlli personalizzati.
+- **ngAfterContentInit():** Viene chiamato dopo che i contenuti proiettati nel componente sono stati inizializzati.
+- **ngAfterContentChecked():** Viene chiamato dopo ogni ciclo di controllo dei cambiamenti dei contenuti proiettati.
+- **ngAfterViewInit():** Viene chiamato dopo che le view child del componente sono state inizializzate.
+- **ngAfterViewChecked():** Viene chiamato dopo ogni ciclo di controllo dei cambiamenti delle view child.
+- **ngOnDestroy():** Viene chiamato prima che il componente venga distrutto. È il posto ideale per eseguire delle operazioni di pulizia, come annullare delle sottoscrizioni.
+
+
+**==Cosa sono i Servizi in Angular?==**
+In Angular, **[i servizi sono classi che contengono logica o funzioni che eseguono operazioni]** specifiche, **[come accedere a dati esterni, effettuare chiamate HTTP]**, gestire lo stato dell'applicazione, o condividere informazioni tra componenti.
+I servizi in Angular vengono spesso forniti tramite **dependency injection**, permettendo ai componenti di richiedere i servizi di cui hanno bisogno senza doverli istanziare manualmente.
+
+
+**==Cosa sono i routing guards e a cosa servono in Angular?==**
+I routing guards sono un meccanismo di sicurezza fondamentale in Angular. Ti permettono di controllare l'accesso alle diverse pagine del tuo sito web in base a determinate condizioni. Sono facili da implementare e ti offrono un gran controllo sulla navigazione dell'utente.
+controllano chi può accedere a una particolare pagina o sezione del tuo sito web.
+
+
+JAVASCRIPT, PUR SUPERANDO I LIMITI HTML, HA DELLE FRAGILITA’ : E’ UNTYPED E NON HA
+SVILUPPATO APPIENO IL PARADIGMA DELLA OOP.
+INFATTI NON CONSENTE LA CREZIONE DI INTERFACCE, E CONSEGUENTEMENTE NON E’POSSIBILE
+APPLICARE POLIMORFISMO E IMPLEMENTARE IL PATTERN LOOSE COUPLING.
+
+TALI LIMITI SONO STATI SUPERATI DA TYPESCRIPT, CHE E’ UN PLUGIN E QUINDI UNA ESTENSIONE DI
+JAVASCRIPT.
+
+TYPESCRIPT MANTIENE TUTTE LE CARATTERISTICHE DI JAVASCRIPT E NE SUPERA I LIMITI.
+TYPESCRIPT E’ UN LINGUAGGIO EVENT DRIVEN, TYPED, ADERENTE AI DUE PARADIGMI OOP (MOLTO
+DI PIU’ RISPETTO A JAVASCRIPT) E FUNZIONALE. TYPESCRIPT CONSENTE DI IMPLEMETARE
+POLIMORFISMO E LOOSE COUPLING, INFATTI CONSENTE DI CREARE INTERFACCE.
+TYPESCRIPT E’ UN LINGUAGGIO TRANSPILATO, OVVERO COMPILATO E TRADOTTO IN JAVASCRIPT
+NATIVO:MA SOLO IL JAVASCRIPT ENGINE,
+
+ TYPESCRIPT VIENE TRADOTTO IN JAVASCRIPT DA NODE.JS,
+
+ANGULAR E’ UN FRAMEWORK MVC (PROGETTO GOOGLE MICROSOFT) BASATO SU LINGUAGGI
+COFFESCRIPT E TYPESCRIPT, E IN QUANTO TALE FORNISCE UNA SERIE DI COMPONENTI APPLICATIVE
+SPECIFICHE COME LA COMPONENT, IL SERVICE E LA PIPE CHE NECESSITANO PER ESSERE ESEGUITE
+DEL RUNTIME ENVIRONMENT NODE.JS.
+ANGULAR E’ UN FRAMEWORK MVC IN QUANTO IMPLEMENTA IL PATTERN MVC ASSEGNANDO
+UNA RESPONSABILITA’ ALLE COMPONENTI APPLICATIVE DI PROGETTO:
+• CLASSI MODEL : CLASSI JAVASCRIPT STANDARD, CHE GESTISCONO I DATI (TRAMITE
+VARIABILI DI ISTANZA E COSTRUTTORE)-à>>RAPPRESENTANO IL MODEL DEL PATTERN
+MVC
+• COMPONENT : HANNO 3 “FACCE”: CLASSE TYPESCRIPT DECORATA CON DECORATOR
+@Component; TEMPLATE HTML PER IL RENDERING DELLE INFORMAZIONI; FILE CSS PER LO
+STYLING. AD OGNI COMPONENT E’ ASSOCIATO UN ALIAS CHIAMATO SELECTOR CHE SERVE
+PER COMPORRE L’APPLICAZIONE ALL’INTERNO DEL FILE index.html -à>>RAPPRESENTANO
+LA VIEW DEL PATTERN MVC
+• SERVICE : SONO CLASSI TYPESCRIPT SPECIALI DECORATE CON DECORATOR @Injectable E
+INIETTABILI NELLE COMPONENT TRAMITE DEPENDENCY INJECTION. ALLE CLASSI SERVICE
+DEVE ESSERE DEMANDATA LA BUSINESS LOGIC, IN PARTICOLARE CONTROLLI E
+INTERAZIONI CON APPLICAZIONI DI TERZE PARTI, COME AD ESEMPIO I WEB SERVICE.
+
+• PIPE : SONO COMPONENTI TYPESCRIPT PREDEFINITE E CUSTOMIZZABILI, A CUI DEVE
+ESSERE DEMANDATA LA LOGICA DI TRASFORMAZIONE E CONVERSIONE DEI
+DATIà>RAPPRESENTANO, INSIEME AI SERVICE, IL CONTROLLER DEL PATTERN MVC.

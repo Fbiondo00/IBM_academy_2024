@@ -1,0 +1,27 @@
+**==Cos'è un Docker? E cos'è un Dockerfile?==**
+**Docker: Un contenitore per le tue applicazioni**
+**Docker** è la piattaforma che ti permette di creare, gestire e distribuire questi container.
+
+**Dockerfile: Le istruzioni per costruire un container**
+Un **Dockerfile** è un semplice file di testo che contiene tutte le istruzioni necessarie per creare un'immagine Docker.
+
+Un'immagine Docker è una rappresentazione statica di un container.
+
+- **[Docker:]** Una piattaforma per creare e gestire container.
+- **[Container:]** Un ambiente isolato per eseguire applicazioni.
+- **[Dockerfile:]** Un file di testo con le istruzioni per creare un'immagine Docker.
+- **[Immagine Docker:]** Una fotografia di un container, pronta per essere eseguita.
+
+
+BUILD DELL’IMMAGINE (dentro il percorso del progetto)
+docker image build -t kubernetes-example .
+11. RUN DEL DOCKER CONTAINER
+docker run -p 8080:8080 kubernetes-example
+
+**==docker run : ==**
+**Cosa fa questo comando?**
+
+- **Prende un'immagine:** Indica a Docker quale immagine utilizzare come base per il nuovo container.
+- **Crea un nuovo container:** Inizia un nuovo processo, creando un container basato sull'immagine specificata.
+- **Avvia il container:** Immediatamente avvia il container, eseguendo il comando predefinito specificato nell'immagine.
+

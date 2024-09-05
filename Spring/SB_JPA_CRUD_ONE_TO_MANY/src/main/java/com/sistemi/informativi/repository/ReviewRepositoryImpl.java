@@ -14,15 +14,15 @@ import jakarta.persistence.PersistenceContext;
 @Transactional
 @Repository
 public class ReviewRepositoryImpl implements ReviewRepository{
-	
+
 	@PersistenceContext
 	private EntityManager em;
 
 	@Override
 	public void addReview(Review review) {
-		
+
 		em.persist(review);
-		
+
 	}
 
 	@Override
@@ -30,13 +30,13 @@ public class ReviewRepositoryImpl implements ReviewRepository{
 
 
 		Course course = em.find(Course.class, courseId);
-		
+
 		/*
-		 * Hibernate eseguirà una 
+		 * Hibernate eseguirà una
 		 * query di join
 		 */
 		return course.getReviews();
-		
+
 	}
 
 }

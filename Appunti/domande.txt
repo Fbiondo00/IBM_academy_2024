@@ -1,0 +1,65 @@
+BackEnd
+	Java
+		classe - oggetto [[1) Oggetto e Classe(Java Base)]]
+		classe astratta vs interfaccia [[2) Classe Astratta, Concrete, Interfaccia]]
+		strutture dati e le loro differenze [[4) Strutture dati]]
+		polimorfismo [[3) Polimorfismo]]
+		stream e i suoi metodi [[4) Strutture dati]]
+		servlet e il ciclo di vita [[6) Servlet + Ciclo di Vita]]
+		Web container [[6) Servlet + Ciclo di Vita]]
+		Application server [[6) Servlet + Ciclo di Vita]]
+		tipologia richieste (get, post, put, delete) [[Tipologia Di Richieste]]
+		servlet engine (container) [[6) Servlet + Ciclo di Vita]]
+		definizione web service (rest, soap) [[WEB SERVICE - ARCHITETTURE WEB.pdf]]
+		status code [[Status Code]]
+		 
+		come si dependency injection @autowired o costruttore [[Dependency injection]]
+	3)Database [[DATABASE.pdf]]
+		relazioni
+		trova esempi pratici + teoria:  [[5) ESEMPI 1M or MM]]
+			one to many (a livello tabellare) es relazione one to mani (FK, PK)
+			many to many 1l
+		SQL [[SQL]]
+	4)Spring
+		jpa + steryotype annotation (entity, table, column, id, generated value)  [[7.2)JPA.pdf]] + [[7.0)SPRING_ANNOTATION.pdf]]
+		dependency injection (Autowired e Constructor Injection) [[Dependency injection]]
+		JPA(NO SQL) vs JDBC(SQL) [[JPA vs JDBC]] [[JDBC, JPA, SPRING DATA JPA]]
+		interfaccia jpa repository [[7.1)SPRING DATA JPA.pdf]]
+		application propertise [[Application properties]]
+		package manager->MAVEN [[Maven]]
+		struttura (service (buisness) e repository(dao))
+		@annotation
+		come gestire le transazione @transactional
+		market interface
+		classi annotate con @Steryotype
+		vantaggi springboot
+		Struttura Applicativa di un Progetto Spring Boot
+		Principali Annotations Entity Jpa
+		Spring Data Jpa (in particolare JPA Repository)
+***************
+deploiment
+microservizi
+principi transazione ACID
+@qualifier
+***************
+5)Angular (FRONTEND)
+[[Javascript]] [[ANGULAR]]
+	JAVASCRIPT
+	   funzionalità
+	   Anonymous Array Functions
+	   Callback Functions -> sincronia/asincrona
+	   differenza tra const, let e var
+	   Oggetti Javascript
+	   Array e relativi metodi (push, pop, map, forEach)
+	   Spread e Rest Operators
+	   inizializzazione array che tipo di struttura è?
+	ANGULAR
+		Struttura di un progetto: angular.json,package.json; main.ts e Moduli; Component; Service; Constructor Dependency Injection;
+		Ciclo di vita di una Component;
+		Relazione di Parentela tra Component, in particolare @Input, @Output, @ViewChild);
+		API RxJS e Observable;
+		Struttura di un Progetto Angular 17 (in particolare Standalone Components
+vecchio colloquio
+https
+a cascata
+bv

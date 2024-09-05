@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0252844-f45e-41f2-9cb7-1a9fa3d8b563" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Microservizi2/product-service-date/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Microservizi2/product-service-date/src/main/java/com/sistemi/informativi/bean/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Microservizi2/product-service-date/src/main/java/com/sistemi/informativi/controller/ProductDateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Microservizi2/product-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Microservizi2/product-service/src/main/java/com/sistemi/informativi/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Microservizi2/product-service/src/main/java/com/sistemi/informativi/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Microservizi2/product-service/src/main/java/com/sistemi/informativi/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Microservizi2/product-service/src/main/java/com/sistemi/informativi/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Microservizi2/product-service/src/main/java/com/sistemi/informativi/service/ProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FRONT_END/TYPESCRIPT-ANGULAR/angular-demo-flavio" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT_END/TYPESCRIPT-ANGULAR/angular-demo-flavio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sistemi/informativi/connection/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sistemi/informativi/connection/ConnectionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sistemi/informativi/connection/ConnectionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sistemi/informativi/connection/ConnectionManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../first-project-full-stack/progetto full-stack/SB_ACADEMY_RESTFUL_WEB_SERVICE_PROVIDER/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../first-project-full-stack/progetto full-stack/SB_ACADEMY_RESTFUL_WEB_SERVICE_PROVIDER/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../first-project-full-stack/progetto full-stack/academy-restful-web-service-consumer" beforeDir="false" afterPath="$PROJECT_DIR$/../../first-project-full-stack/progetto full-stack/academy-restful-web-service-consumer" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,9 +16,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2k4ZGLnERejgqycMwWtiC2kYUo1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,6 +29,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -75,6 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1722544714678</updated>
       <workItem from="1722544717130" duration="100000" />
+      <workItem from="1723131549338" duration="510000" />
     </task>
     <servers />
   </component>
